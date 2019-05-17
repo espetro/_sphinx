@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drone
+  name="bebop"
+  firmware="/opt/parrot-sphinx/usr/share/sphinx/firmwares/ardrone3-mykonos3_pc.ext2.zip"
+  hardware="mykonos3board">
+  <machine_params
+    low_gpu="false"
+    with_bumpers="true"
+    with_front_cam="false"/>
+  <pose>default</pose>
+  <interface>eth1</interface>
+  <!-- 'wlan0' may need to be replaced the actual wifi interface name -->
+  <!-- <stolen_interface>wlan0:eth0:192.168.42.1/24</stolen_interface> -->
+  <!-- <wifi_channel>6</wifi_channel> -->
+  <stolen_interface>wlan0:eth0:192.168.42.1/24</stolen_interface>
+  <wifi_channel>6</wifi_channel>  
+</drone>
