@@ -60,9 +60,4 @@
     <velocity>1</velocity>
     <model>washer_10</model>
   </waypoint>
-  <waypoint>
-    <animation>walk</animation>
-    <velocity>1</velocity>
-    <model>washer_11</model>
-  </waypoint>
 </path>

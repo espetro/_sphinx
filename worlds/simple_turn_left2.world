@@ -80,212 +80,15 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <state world_name='default'>
-      <sim_time>444 668000000</sim_time>
-      <real_time>450 945592895</real_time>
-      <wall_time>1558013114 946706387</wall_time>
-      <iterations>444668</iterations>
-      <model name='drc_practice_white_jersey_barrier'>
-        <pose frame=''>1.78771 5.82373 0 0 0 -0.785398</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>1.78771 5.82373 0 0 0 -0.785398</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='drc_practice_white_jersey_barrier_clone'>
-        <pose frame=''>0 5 0 0 0 -1.5708</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>0 5 0 0 0 -1.5708</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='drc_practice_white_jersey_barrier_clone_0'>
-        <pose frame=''>0.060698 10.0444 0 0 -0 1.5708</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>0.060698 10.0444 0 0 -0 1.5708</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='drc_practice_white_jersey_barrier_clone_1'>
-        <pose frame=''>-1.72296 9.34128 0 0 0 -0.785398</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-1.72296 9.34128 0 0 0 -0.785398</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='drc_practice_white_jersey_barrier_clone_2'>
-        <pose frame=''>1.81226 9.27858 0 0 -0 0.785398</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>1.81226 9.27858 0 0 -0 0.785398</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='drc_practice_white_jersey_barrier_clone_2_clone'>
-        <pose frame=''>2.55055 7.59091 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>2.55055 7.59091 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='drc_practice_white_jersey_barrier_clone_2_clone_0'>
-        <pose frame=''>-2.50821 7.55772 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-2.50821 7.55772 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='drc_practice_white_jersey_barrier_clone_3'>
-        <pose frame=''>-1.81323 5.76636 0 0 -0 0.785398</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-1.81323 5.76636 0 0 -0 0.785398</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='ground_plane'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='washer_22'>
-        <pose frame=''>0 2 -0.000561 -0.016306 -0.005486 6.3e-05</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-5e-06 2.00002 0.000439 -0.016306 -0.005486 6.3e-05</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.002483 -0.000783 0.003461 -2.42742 -0.559642 -3.09121</acceleration>
-          <wrench>-3e-05 -1e-05 4.2e-05 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='washer_23'>
-        <pose frame=''>0 4 -0.000499 -0.014491 -0.004873 5e-05</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-5e-06 4.00001 0.000501 -0.014491 -0.004873 5e-05</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>3.8e-05 1.8e-05 -9.2e-05 -0.017613 0.039113 -0.000646</acceleration>
-          <wrench>0 0 -1e-06 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='washer_24'>
-        <pose frame=''>3 4.53424 -0.000436 -0.012677 -0.004264 3.8e-05</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>3 4.53425 0.000563 -0.012677 -0.004264 3.8e-05</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.002505 0.000765 -0.003458 2.42967 0.559949 3.10243</acceleration>
-          <wrench>3.1e-05 9e-06 -4.2e-05 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='washer_25'>
-        <pose frame=''>4 7 -0.000374 -0.010864 -0.003654 2.8e-05</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>4 7.00001 0.000626 -0.010864 -0.003654 2.8e-05</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.002516 0.000757 -0.003457 2.43053 0.559653 3.10804</acceleration>
-          <wrench>3.1e-05 9e-06 -4.2e-05 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='washer_26'>
-        <pose frame=''>3 9.49398 -0.000312 -0.009051 -0.003045 1.9e-05</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>3 9.49399 0.000688 -0.009051 -0.003045 1.9e-05</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.002565 -0.000766 0.003547 -2.41389 -0.521054 -3.11324</acceleration>
-          <wrench>-3.1e-05 -9e-06 4.3e-05 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='washer_27'>
-        <pose frame=''>0 11 -0.000249 -0.00724 -0.002437 1.2e-05</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-2e-06 11 0.000751 -0.00724 -0.002437 1.2e-05</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.002537 -0.00074 0.003455 -2.43212 -0.560049 -3.11923</acceleration>
-          <wrench>-3.1e-05 -9e-06 4.2e-05 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='washer_28'>
-        <pose frame=''>-3 9.51547 -0.000187 -0.005431 -0.001828 7e-06</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-3 9.51548 0.000813 -0.005431 -0.001828 7e-06</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.002548 -0.000732 0.003453 -2.43277 -0.560372 -3.12482</acceleration>
-          <wrench>-3.1e-05 -9e-06 4.2e-05 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='washer_29'>
-        <pose frame=''>-4 7 -0.000125 -0.003623 -0.00122 3e-06</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-4 7 0.000875 -0.003623 -0.00122 3e-06</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.002559 -0.000724 0.003452 -2.43334 -0.560774 -3.13041</acceleration>
-          <wrench>-3.1e-05 -9e-06 4.2e-05 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='washer_30'>
-        <pose frame=''>-3 4.50122 -6.2e-05 -0.001818 -0.000613 1e-06</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-3 4.50122 0.000938 -0.001818 -0.000613 1e-06</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-0.002569 -0.000715 0.003451 -2.4338 -0.561256 -3.13598</acceleration>
-          <wrench>-3.1e-05 -9e-06 4.2e-05 0 -0 0</wrench>
-        </link>
-      </model>
-      <light name='sun'>
-        <pose frame=''>0 0 10 0 -0 0</pose>
-      </light>
-    </state>
-    <model name='drc_practice_white_jersey_barrier'>
+    <model name='grey_wall'>
       <static>1</static>
       <link name='link'>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
+        <pose frame=''>0 0 1.4 0 -0 0</pose>
         <collision name='collision'>
           <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
           </geometry>
           <max_contacts>10</max_contacts>
           <surface>
@@ -301,29 +104,36 @@
             </friction>
           </surface>
         </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
-      <pose frame=''>0.345246 1.71371 0 0 -0 0</pose>
+      <pose frame=''>-2 3 0 0 -0 0</pose>
     </model>
-    <model name='drc_practice_white_jersey_barrier_clone'>
+    <model name='grey_wall_clone'>
       <static>1</static>
       <link name='link'>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
+        <pose frame=''>0 0 1.4 0 -0 0</pose>
         <collision name='collision'>
           <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
           </geometry>
           <max_contacts>10</max_contacts>
           <surface>
@@ -339,29 +149,36 @@
             </friction>
           </surface>
         </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
-      <pose frame=''>0.129562 1.88644 0 0 -0 0</pose>
+      <pose frame=''>4 3 0 0 -0 0</pose>
     </model>
-    <model name='drc_practice_white_jersey_barrier_clone_0'>
+    <model name='grey_wall_clone_0'>
       <static>1</static>
       <link name='link'>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
+        <pose frame=''>0 0 1.4 0 -0 0</pose>
         <collision name='collision'>
           <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
           </geometry>
           <max_contacts>10</max_contacts>
           <surface>
@@ -377,29 +194,36 @@
             </friction>
           </surface>
         </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
-      <pose frame=''>-0.162349 2.0972 0 0 -0 0</pose>
+      <pose frame=''>0.047091 1.12355 0 0 -0 1.5708</pose>
     </model>
-    <model name='drc_practice_white_jersey_barrier_clone_1'>
+    <model name='grey_wall_clone_1'>
       <static>1</static>
       <link name='link'>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
+        <pose frame=''>0 0 1.4 0 -0 0</pose>
         <collision name='collision'>
           <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
           </geometry>
           <max_contacts>10</max_contacts>
           <surface>
@@ -415,29 +239,36 @@
             </friction>
           </surface>
         </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
+        </visual>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
-      <pose frame=''>-0.60272 2.1395 0 0 -0 0</pose>
+      <pose frame=''>-2 5 0 0 -0 1.5708</pose>
     </model>
-    <model name='drc_practice_white_jersey_barrier_clone_2'>
+    <model name='grey_wall_clone_2'>
       <static>1</static>
       <link name='link'>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
+        <pose frame=''>0 0 1.4 0 -0 0</pose>
         <collision name='collision'>
           <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
           </geometry>
           <max_contacts>10</max_contacts>
           <surface>
@@ -453,127 +284,29 @@
             </friction>
           </surface>
         </collision>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>-1.07814 2.07579 0 0 -0 0</pose>
-    </model>
-    <model name='drc_practice_white_jersey_barrier_clone_3'>
-      <static>1</static>
-      <link name='link'>
         <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
           <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
+            <box>
+              <size>7.5 0.2 2.8</size>
+            </box>
           </geometry>
+          <material>
+            <script>
+              <uri>model://grey_wall/materials/scripts</uri>
+              <uri>model://grey_wall/materials/textures</uri>
+              <name>vrc/grey_wall</name>
+            </script>
+          </material>
         </visual>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
-      <pose frame=''>-1.73453 2.23412 0 0 -0 0</pose>
+      <pose frame=''>2 -1 0 0 -0 1.5708</pose>
     </model>
-    <model name='drc_practice_white_jersey_barrier_clone_2_clone'>
-      <static>1</static>
-      <link name='link'>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>1.46942 7.73088 0 0 -0 0.785398</pose>
-    </model>
-    <model name='drc_practice_white_jersey_barrier_clone_2_clone_0'>
-      <static>1</static>
-      <link name='link'>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-        </visual>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://drc_practice_white_jersey_barrier/meshes/jersey_barrier.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>-2.43792 7.41043 0 0 -0 0.785398</pose>
-    </model>
-    <model name='washer_22'>
+    
+    <model name='washer'>
       <link name='link'>
         <pose frame=''>0 0 0.001 0 -0 0</pose>
         <inertial>
@@ -638,7 +371,7 @@
       </link>
       <pose frame=''>0 2 0 0 -0 0</pose>
     </model>
-    <model name='washer_23'>
+    <model name='washer_0'>
       <link name='link'>
         <pose frame=''>0 0 0.001 0 -0 0</pose>
         <inertial>
@@ -703,7 +436,7 @@
       </link>
       <pose frame=''>0 4 0 0 -0 0</pose>
     </model>
-    <model name='washer_24'>
+    <model name='washer_1'>
       <link name='link'>
         <pose frame=''>0 0 0.001 0 -0 0</pose>
         <inertial>
@@ -766,9 +499,9 @@
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
-      <pose frame=''>3 4.53424 0 0 -0 0</pose>
+      <pose frame=''>0 6 0 0 -0 0</pose>
     </model>
-    <model name='washer_25'>
+    <model name='washer_2'>
       <link name='link'>
         <pose frame=''>0 0 0.001 0 -0 0</pose>
         <inertial>
@@ -831,9 +564,9 @@
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
-      <pose frame=''>4 7 0 0 -0 0</pose>
+      <pose frame=''>0 8 0 0 -0 0</pose>
     </model>
-    <model name='washer_26'>
+    <model name='washer_3'>
       <link name='link'>
         <pose frame=''>0 0 0.001 0 -0 0</pose>
         <inertial>
@@ -896,9 +629,9 @@
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
-      <pose frame=''>3 9.49398 0 0 -0 0</pose>
+      <pose frame=''>-1 9.51459 0 0 -0 0</pose>
     </model>
-    <model name='washer_27'>
+    <model name='washer_4'>
       <link name='link'>
         <pose frame=''>0 0 0.001 0 -0 0</pose>
         <inertial>
@@ -961,9 +694,9 @@
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
-      <pose frame=''>0 11 0 0 -0 0</pose>
+      <pose frame=''>-2 9.54801 0 0 -0 0</pose>
     </model>
-    <model name='washer_28'>
+    <model name='washer_5'>
       <link name='link'>
         <pose frame=''>0 0 0.001 0 -0 0</pose>
         <inertial>
@@ -1026,144 +759,7 @@
         <kinematic>0</kinematic>
         <gravity>1</gravity>
       </link>
-      <pose frame=''>-3 9.51547 0 0 -0 0</pose>
+      <pose frame=''>-4 9.51009 0 0 -0 0</pose>
     </model>
-    <model name='washer_29'>
-      <link name='link'>
-        <pose frame=''>0 0 0.001 0 -0 0</pose>
-        <inertial>
-          <mass>0.0122</mass>
-          <inertia>
-            <ixx>1.08758e-06</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1.08758e-06</iyy>
-            <iyz>0</iyz>
-            <izz>2.16703e-06</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://washer/meshes/washer.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <poissons_ratio>0.305</poissons_ratio>
-              <elastic_modulus>2e+11</elastic_modulus>
-              <ode>
-                <kp>100000</kp>
-                <kd>100</kd>
-                <max_vel>100</max_vel>
-                <min_depth>0.001</min_depth>
-              </ode>
-            </contact>
-            <friction>
-              <torsional>
-                <coefficient>1</coefficient>
-                <use_patch_radius>0</use_patch_radius>
-                <surface_radius>0.01</surface_radius>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-            <bounce/>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://washer/meshes/washer.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>-4 7 0 0 -0 0</pose>
-    </model>
-    <model name='washer_30'>
-      <link name='link'>
-        <pose frame=''>0 0 0.001 0 -0 0</pose>
-        <inertial>
-          <mass>0.0122</mass>
-          <inertia>
-            <ixx>1.08758e-06</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1.08758e-06</iyy>
-            <iyz>0</iyz>
-            <izz>2.16703e-06</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://washer/meshes/washer.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <poissons_ratio>0.305</poissons_ratio>
-              <elastic_modulus>2e+11</elastic_modulus>
-              <ode>
-                <kp>100000</kp>
-                <kd>100</kd>
-                <max_vel>100</max_vel>
-                <min_depth>0.001</min_depth>
-              </ode>
-            </contact>
-            <friction>
-              <torsional>
-                <coefficient>1</coefficient>
-                <use_patch_radius>0</use_patch_radius>
-                <surface_radius>0.01</surface_radius>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-            <bounce/>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://washer/meshes/washer.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>-3 4.50122 0 0 -0 0</pose>
-    </model>
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
-        <pose frame=''>1.1892 2.36584 10.4177 -1e-06 1.5378 1.59536</pose>
-        <view_controller>orbit</view_controller>
-        <projection_type>perspective</projection_type>
-      </camera>
-    </gui>
   </world>
 </sdf>

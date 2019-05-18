@@ -4,7 +4,7 @@
 <path name="follow_targets">
   <auto_start>true</auto_start>
   <delay_start>1.000000</delay_start>
-  <loop>false</loop>
+  <loop>true</loop>
   <waypoint>
     <animation>walk</animation>
     <velocity>1</velocity>
@@ -64,5 +64,10 @@
     <animation>walk</animation>
     <velocity>1</velocity>
     <model>washer_11</model>
+  </waypoint>
+  <waypoint>
+    <animation>walk</animation>
+    <velocity>1</velocity>
+    <model>washer_12</model>
   </waypoint>
 </path>

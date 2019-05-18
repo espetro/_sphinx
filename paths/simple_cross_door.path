@@ -30,39 +30,4 @@
     <velocity>1</velocity>
     <model>washer_4</model>
   </waypoint>
-  <waypoint>
-    <animation>walk</animation>
-    <velocity>1</velocity>
-    <model>washer_5</model>
-  </waypoint>
-  <waypoint>
-    <animation>walk</animation>
-    <velocity>1</velocity>
-    <model>washer_6</model>
-  </waypoint>
-  <waypoint>
-    <animation>walk</animation>
-    <velocity>1</velocity>
-    <model>washer_7</model>
-  </waypoint>
-  <waypoint>
-    <animation>walk</animation>
-    <velocity>1</velocity>
-    <model>washer_8</model>
-  </waypoint>
-  <waypoint>
-    <animation>walk</animation>
-    <velocity>1</velocity>
-    <model>washer_9</model>
-  </waypoint>
-  <waypoint>
-    <animation>walk</animation>
-    <velocity>1</velocity>
-    <model>washer_10</model>
-  </waypoint>
-  <waypoint>
-    <animation>walk</animation>
-    <velocity>1</velocity>
-    <model>washer_11</model>
-  </waypoint>
 </path>

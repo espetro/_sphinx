@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- This path is defined to follow the numbered model targets in the world $SPHINX_ROOT/worlds/simple_path.world
 -->
-<path name="follow_path">
-  <auto_start>false</auto_start>
-  <delay_start>5.000000</delay_start>
+<path name="follow_targets">
+  <auto_start>true</auto_start>
+  <delay_start>1.000000</delay_start>
   <loop>false</loop>
   <waypoint>
     <animation>walk</animation>
     <velocity>1</velocity>
-    <xy>0 0</xy>
+    <xy>0 -1</xy>
   </waypoint>
   <waypoint>
     <animation>walk</animation>
@@ -19,12 +19,12 @@
     <animation>walk</animation>
     <velocity>1</velocity>
     <model>washer_2</model>
-    <stop_duration>4.000000</stop_duration>
   </waypoint>
   <waypoint>
     <animation>walk</animation>
     <velocity>1</velocity>
     <model>washer_3</model>
+    <stop_duration>2.000000</stop_duration>
   </waypoint>
   <waypoint>
     <animation>walk</animation>
@@ -35,5 +35,37 @@
     <animation>walk</animation>
     <velocity>1</velocity>
     <model>washer_5</model>
+  </waypoint>
+  <waypoint>
+    <animation>run</animation>
+    <velocity>2</velocity>
+    <model>washer_6</model>
+    <stop_duration>2.000000</stop_duration>
+  </waypoint>
+  <waypoint>
+    <animation>run</animation>
+    <velocity>2</velocity>
+    <model>washer_7</model>
+  </waypoint>
+  <waypoint>
+    <animation>run</animation>
+    <velocity>2</velocity>
+    <model>washer_8</model>
+  </waypoint>
+  <waypoint>
+    <animation>run</animation>
+    <velocity>2</velocity>
+    <model>washer_9</model>
+    <stop_duration>4.000000</stop_duration>
+  </waypoint>
+  <waypoint>
+    <animation>run</animation>
+    <velocity>2</velocity>
+    <model>washer_10</model>
+  </waypoint>
+  <waypoint>
+    <animation>walk</animation>
+    <velocity>1</velocity>
+    <model>washer_11</model>
   </waypoint>
 </path>
