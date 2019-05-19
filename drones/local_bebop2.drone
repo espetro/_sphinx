@@ -14,4 +14,6 @@
   <!-- 'wlan0' may need to be replaced the actual wifi interface name -->
   <!-- <stolen_interface>wlan0:eth0:192.168.42.1/24</stolen_interface> -->
   <!-- <wifi_channel>6</wifi_channel> -->
+  <stolen_interface>wlan0:eth0:192.168.42.1/24</stolen_interface>
+  <wifi_channel>6</wifi_channel>
 </drone>
