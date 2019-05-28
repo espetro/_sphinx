@@ -9,11 +9,9 @@
     with_hd_battery="false"
     with_flir="true"
     flir_pos="tilted"/>
-  <pose>1 0 0 0 0 0</pose>
+  <pose>-1 0 0 0 0 1.25</pose>
   <interface>eth1</interface>
   <!-- 'wlan0' may need to be replaced the actual wifi interface name -->
   <!-- <stolen_interface>wlan0:eth0:192.168.42.1/24</stolen_interface> -->
   <!-- <wifi_channel>6</wifi_channel> -->
-  <stolen_interface>wlan0:eth0:192.168.42.1/24</stolen_interface>
-  <wifi_channel>6</wifi_channel>
 </drone>

@@ -5,7 +5,7 @@
 -->
 <path name="follow_targets">
   <auto_start>true</auto_start>
-  <delay_start>10.000000</delay_start>
+  <delay_start>15.000000</delay_start>
   <loop>false</loop>
   <waypoint>
     <animation>walk</animation>
