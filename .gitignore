@@ -1,0 +1,7 @@
+# Dont include heavy files
+firmwares/
+media/
+doc/
+models/
+public/
+
