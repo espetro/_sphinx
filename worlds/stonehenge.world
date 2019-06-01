@@ -3,7 +3,7 @@
   <world name="default">
     <gui>
       <camera name="user_camera">
-        <pose>-7.67 1.63 2.5 0.00 0.143 -0.327</pose>
+        <pose>-31.4742622375488281 10.6645917892456055 124.7510528564453125 -0.0000000061694163 0.6057507481416582 -0.4140146405913985</pose>
         <track_visual>
           <static>true</static>
           <use_model_frame>true</use_model_frame>
@@ -13,8 +13,8 @@
       </camera>
     </gui>
     <spherical_coordinates>
-      <latitude_deg>48.878922</latitude_deg>
-      <longitude_deg>2.367782</longitude_deg>
+      <latitude_deg>51.178842</latitude_deg>
+      <longitude_deg>-1.826215</longitude_deg>
     </spherical_coordinates>
     <physics type="ode">
       <real_time_update_rate>1000</real_time_update_rate>
@@ -47,7 +47,7 @@
     </atmosphere>
     <plugin name="fwman" filename="libsphinx_fwman.so">
       <spawn_point name="default">
-        <pose>0 0 0.2 0 0 0</pose>
+        <pose>1.04 -10 102.1 0 0 0</pose>
       </spawn_point>
     </plugin>
     <!--*****************-->
@@ -77,75 +77,41 @@
     <!--Scene description-->
     <!--*****************-->
     <include>
-      <uri>model://sun</uri>
+      <uri>model://stonehenge</uri>
+      <pose>0 10 101 0 0 0</pose>
     </include>
-    <include>
-      <uri>model://house_1</uri>
-      <pose>-4.18156 -5.60557 0 0 -0 3.12318</pose>
-    </include>
-    <include>
-      <uri>model://house_2</uri>
-      <pose>2 10 0 0 -0 0</pose>
-    </include>
-    <include>
-      <uri>model://house_3</uri>
-      <pose>-5 9 0 0 -0 0</pose>
-    </include>
-    <include>
-      <uri>model://jersey_barrier</uri>
-      <pose>3 -3 0 0 -0 0</pose>
-    </include>
-    <include>
-      <uri>model://jersey_barrier</uri>
-      <pose>6 -1 0 0 -0 1.6</pose>
-    </include>
-    <include>
-      <uri>model://grey_wall</uri>
-      <pose>10.402 7.71769 0 0 -0 0</pose>
-    </include>
-    <include>
-      <uri>model://nist_stairs_120</uri>
-      <pose>9.01164 2.82223 0 0 -0 0</pose>
-    </include>
-    <include>
-      <uri>model://nist_elevated_floor_120</uri>
-      <pose>9 4 0 0 -0 0</pose>
-    </include>
-    <include>
-      <uri>model://nist_maze_wall_240</uri>
-      <pose>9 4 0 0 -0 0</pose>
-    </include>
-    <include>
-      <uri>model://nist_maze_wall_triple_holes_120</uri>
-      <pose>9.02578 4.02961 1.2 0 -0 1.6</pose>
-    </include>
-    <model name="asphalt_plane">
-      <pose>0 0 -0.05 0 0 0</pose>
-      <static>true</static>
-      <link name="link">
-        <collision name="collision">
-          <geometry>
-            <box>
-              <size>30 30 .1</size>
-            </box>
-          </geometry>
-        </collision>
-        <visual name="visual">
-          <cast_shadows>false</cast_shadows>
-          <geometry>
-            <box>
-              <size>30 30 .1</size>
-            </box>
-          </geometry>
-          <material>
-            <script>
-              <uri>model://asphalt_plane/materials/scripts</uri>
-              <uri>model://asphalt_plane/materials/textures</uri>
-              <name>vrc/asphalt</name>
-            </script>
-          </material>
-        </visual>
-      </link>
-    </model>
+    <scene>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+    </scene>
+    <light type="directional" name="sun1">
+      <cast_shadows>true</cast_shadows>
+      <pose>-10 0 140 0 0 0</pose>
+      <diffuse>1 0.86 0.7 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.0</quadratic>
+      </attenuation>
+      <direction>0 0 -1</direction>
+    </light>
+    <light type="directional" name="sun2">
+      <cast_shadows>true</cast_shadows>
+      <pose>10 0 140 0 0 0</pose>
+      <diffuse>1 0.86 0.7 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.0</quadratic>
+      </attenuation>
+      <direction>0 0 -1</direction>
+    </light>
   </world>
 </sdf>
