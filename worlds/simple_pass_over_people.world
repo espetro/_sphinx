@@ -116,7 +116,7 @@
       <pose>0 21 0 0 0 0</pose>
     </include>                    
 
-    <!-- Path followed by bot_actor -->
+    <!-- Path followed by bot_actor, who crosses the main_bot a couple of times -->
     <include>
       <name>washer_21</name>
       <uri>model://washer</uri>

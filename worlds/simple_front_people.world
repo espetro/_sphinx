@@ -61,6 +61,7 @@
 
     <!-- Models are included in this basis. You can assign them a name and a start pose -->
 
+    <!-- Trajectory for main_bot -->
     <include>
       <name>washer_1</name>
       <uri>model://washer</uri>
@@ -82,6 +83,7 @@
       <pose>0 7 0 0 0 0</pose>
     </include>
 
+    <!-- Trajectory for secondary_bot -->
     <include>
       <name>washer_8</name>
       <uri>model://washer</uri>

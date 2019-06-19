@@ -4,12 +4,6 @@
     <gui>
       <camera name="user_camera">
         <pose>-8.89 -14.33 12.97 0.0 0.58 0.84</pose>
-        <track_visual>
-          <static>true</static>
-          <use_model_frame>true</use_model_frame>
-          <xyz>-3 0 1</xyz>
-          <inherit_yaw>true</inherit_yaw>
-        </track_visual>
       </camera>
     </gui>
     <spherical_coordinates>

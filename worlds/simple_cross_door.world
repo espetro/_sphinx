@@ -5,14 +5,6 @@
     <gui fullscreen='0'>
       <camera name='user_camera'>
         <pose frame=''>2.70464 -1.54753 3.05779 0 0.339643 2.2362</pose>
-        <track_visual>
-          <static>true</static>
-          <use_model_frame>true</use_model_frame>
-          <xyz>-3 0 1</xyz>
-          <inherit_yaw>true</inherit_yaw>
-        </track_visual>
-        <view_controller>orbit</view_controller>
-        <projection_type>perspective</projection_type>
       </camera>
     </gui>
 

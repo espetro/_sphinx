@@ -1,665 +1,63 @@
-<sdf version='1.6'>
+<?xml version="1.0"?>
+<sdf version='1.5'>
   <world name='default'>
-    <physics name='default_physics' default='0' type='ode'>
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>2.70464 -1.54753 3.05779 0 0.339643 2.2362</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+
+    <spherical_coordinates>
+      <latitude_deg>46.414296</latitude_deg>
+      <longitude_deg>6.928084</longitude_deg>
+    </spherical_coordinates>
+
+    <physics type="ode">
+      <real_time_update_rate>1000</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <max_contacts>20</max_contacts>
+      <gravity>0 0 -9.81</gravity>
+      <magnetic_field>0.1062e-6 20.8038e-6 -43.2881e-6</magnetic_field>
       <ode>
         <solver>
-          <type>quick</type>
+          <type>world</type>
+          <min_step_size>0.0001</min_step_size>
           <iters>50</iters>
-          <sor>0.8</sor>
-          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+          <precon_iters>0</precon_iters>
+          <sor>1.4</sor>
+          <use_dynamic_moi_rescaling>1</use_dynamic_moi_rescaling>
         </solver>
         <constraints>
           <cfm>0</cfm>
           <erp>0.2</erp>
-          <contact_max_correcting_vel>0.1</contact_max_correcting_vel>
-          <contact_surface_layer>0</contact_surface_layer>
+          <contact_max_correcting_vel>100.0</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
         </constraints>
       </ode>
-      <real_time_update_rate>0</real_time_update_rate>
-      <max_step_size>0.001</max_step_size>
-      <real_time_factor>1</real_time_factor>
     </physics>
-    <light name='sun' type='directional'>
-      <cast_shadows>1</cast_shadows>
-      <pose frame=''>0 0 10 0 -0 0</pose>
-      <diffuse>0.8 0.8 0.8 1</diffuse>
-      <specular>0.2 0.2 0.2 1</specular>
-      <attenuation>
-        <range>1000</range>
-        <constant>0.9</constant>
-        <linear>0.01</linear>
-        <quadratic>0.001</quadratic>
-      </attenuation>
-      <direction>-0.5 0.1 -0.9</direction>
-    </light>
-    <model name='ground_plane'>
-      <static>1</static>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>100 100</size>
-            </plane>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>100</mu>
-                <mu2>50</mu2>
-              </ode>
-              <torsional>
-                <ode/>
-              </torsional>
-            </friction>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <cast_shadows>0</cast_shadows>
-          <geometry>
-            <plane>
-              <normal>0 0 1</normal>
-              <size>100 100</size>
-            </plane>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-    </model>
-    <model name='wind_demo_model'>
-      <pose frame=''>0 0 0 0 -0 0</pose>
-      <static>0</static>
-      <enable_wind>1</enable_wind>
-      <self_collide>1</self_collide>
-      <link name='roof'>
-        <kinematic>1</kinematic>
-        <pose frame=''>0 0 1 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <box>
-              <size>1 1 0.1</size>
-            </box>
-          </geometry>
-          <surface>
-            <friction>
-              <ode>
-                <mu>0.1</mu>
-                <mu2>0</mu2>
-              </ode>
-              <torsional>
-                <ode/>
-              </torsional>
-            </friction>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <transparency>0.9</transparency>
-          <geometry>
-            <box>
-              <size>2 2 0.1</size>
-            </box>
-          </geometry>
-          <material>
-            <ambient>0.2 0.2 0.2 1</ambient>
-            <diffuse>0.421 0.225 0 1</diffuse>
-          </material>
-        </visual>
-        <self_collide>1</self_collide>
-        <inertial>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <gravity>1</gravity>
-      </link>
-      <link name='sphere_1'>
-        <pose frame=''>0 0 0.93 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>1 0 0 1</ambient>
-            <diffuse>0.421 0.225 0 1</diffuse>
-          </material>
-        </visual>
-        <self_collide>1</self_collide>
-        <inertial>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <joint name='sphere_1_joint' type='ball'>
-        <parent>roof</parent>
-        <child>sphere_1</child>
-      </joint>
-      <link name='sphere_2'>
-        <pose frame=''>0 0 0.89 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>1 0 0 1</ambient>
-            <diffuse>0.421 0.225 0 1</diffuse>
-          </material>
-        </visual>
-        <self_collide>1</self_collide>
-        <inertial>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <joint name='sphere_2_joint' type='ball'>
-        <parent>sphere_1</parent>
-        <child>sphere_2</child>
-      </joint>
-      <link name='sphere_3'>
-        <pose frame=''>0 0 0.85 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>1 0 0 1</ambient>
-            <diffuse>0.421 0.225 0 1</diffuse>
-          </material>
-        </visual>
-        <self_collide>1</self_collide>
-        <inertial>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <joint name='sphere_3_joint' type='ball'>
-        <parent>sphere_2</parent>
-        <child>sphere_3</child>
-      </joint>
-      <link name='sphere_4'>
-        <pose frame=''>0 0 0.81 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>1 0 0 1</ambient>
-            <diffuse>0.421 0.225 0 1</diffuse>
-          </material>
-        </visual>
-        <self_collide>1</self_collide>
-        <inertial>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <joint name='sphere_4_joint' type='ball'>
-        <parent>sphere_3</parent>
-        <child>sphere_4</child>
-      </joint>
-      <link name='sphere_5'>
-        <pose frame=''>0 0 0.77 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>1 0 0 1</ambient>
-            <diffuse>0.421 0.225 0 1</diffuse>
-          </material>
-        </visual>
-        <self_collide>1</self_collide>
-        <inertial>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <joint name='sphere_5_joint' type='ball'>
-        <parent>sphere_4</parent>
-        <child>sphere_5</child>
-      </joint>
-      <link name='sphere_6'>
-        <pose frame=''>0 0 0.73 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>1 0 0 1</ambient>
-            <diffuse>0.421 0.225 0 1</diffuse>
-          </material>
-        </visual>
-        <self_collide>1</self_collide>
-        <inertial>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <joint name='sphere_6_joint' type='ball'>
-        <parent>sphere_5</parent>
-        <child>sphere_6</child>
-      </joint>
-      <link name='sphere_7'>
-        <pose frame=''>0 0 0.69 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>1 0 0 1</ambient>
-            <diffuse>0.421 0.225 0 1</diffuse>
-          </material>
-        </visual>
-        <self_collide>1</self_collide>
-        <inertial>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <joint name='sphere_7_joint' type='ball'>
-        <parent>sphere_6</parent>
-        <child>sphere_7</child>
-      </joint>
-      <link name='sphere_8'>
-        <pose frame=''>0 0 0.65 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>1 0 0 1</ambient>
-            <diffuse>0.421 0.225 0 1</diffuse>
-          </material>
-        </visual>
-        <self_collide>1</self_collide>
-        <inertial>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <joint name='sphere_8_joint' type='ball'>
-        <parent>sphere_7</parent>
-        <child>sphere_8</child>
-      </joint>
-      <link name='sphere_9'>
-        <pose frame=''>0 0 0.61 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>1 0 0 1</ambient>
-            <diffuse>0.421 0.225 0 1</diffuse>
-          </material>
-        </visual>
-        <self_collide>1</self_collide>
-        <inertial>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <joint name='sphere_9_joint' type='ball'>
-        <parent>sphere_8</parent>
-        <child>sphere_9</child>
-      </joint>
-      <link name='sphere_10'>
-        <pose frame=''>0 0 0.57 0 -0 0</pose>
-        <collision name='collision'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <sphere>
-              <radius>0.02</radius>
-            </sphere>
-          </geometry>
-          <material>
-            <ambient>1 0 0 1</ambient>
-            <diffuse>0.421 0.225 0 1</diffuse>
-          </material>
-        </visual>
-        <self_collide>1</self_collide>
-        <inertial>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <joint name='sphere_10_joint' type='ball'>
-        <parent>sphere_9</parent>
-        <child>sphere_10</child>
-      </joint>
-    </model>
+
+    <atmosphere type="adiabatic">
+      <temperature>298.15</temperature>
+      <pressure>101325</pressure>
+      <temperature_gradient>-0.0065</temperature_gradient>
+    </atmosphere>
+
+    <plugin name="fwman" filename="libsphinx_fwman.so">
+      <spawn_point name="default">
+        <pose>0 0 0.2 0 0 0</pose>
+      </spawn_point>
+    </plugin>
+
+    <!-- Wind params -->
     <wind>
       <linear_velocity>0 1 0</linear_velocity>
     </wind>
+    
+    <!-- Wind plugin -->
     <plugin name='wind' filename='libWindPlugin.so'>
       <horizontal>
         <magnitude>
@@ -692,416 +90,91 @@
         </noise>
       </vertical>
     </plugin>
-    <gravity>0 0 -10</gravity>
-    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
-    <atmosphere type='adiabatic'/>
+
+    <!--*****************-->
+    <!--Scene description-->
+    <!--*****************-->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- Trajectory for main_bot -->
+    <include>
+      <name>washer_1</name>
+      <uri>model://washer</uri>
+      <pose>0 1.5 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>washer_2</name>
+      <uri>model://washer</uri>
+      <pose>0 3 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>washer_3</name>
+      <uri>model://washer</uri>
+      <pose>0 5 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>washer_4</name>
+      <uri>model://washer</uri>
+      <pose>0 7 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>washer_5</name>
+      <uri>model://washer</uri>
+      <pose>0 9 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>washer_6</name>
+      <uri>model://washer</uri>
+      <pose>0 11 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>washer_7</name>
+      <uri>model://washer</uri>
+      <pose>0 13 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>washer_8</name>
+      <uri>model://washer</uri>
+      <pose>0 15 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>washer_9</name>
+      <uri>model://washer</uri>
+      <pose>0 17 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>washer_10</name>
+      <uri>model://washer</uri>
+      <pose>0 19 0 0 0 0</pose>
+    </include>
+    <include>
+      <name>washer_11</name>
+      <uri>model://washer</uri>
+      <pose>0 21 0 0 0 0</pose>
+    </include>
+
     <scene>
       <ambient>0.4 0.4 0.4 1</ambient>
       <background>0.7 0.7 0.7 1</background>
       <shadows>1</shadows>
     </scene>
-    <spherical_coordinates>
-      <surface_model>EARTH_WGS84</surface_model>
-      <latitude_deg>0</latitude_deg>
-      <longitude_deg>0</longitude_deg>
-      <elevation>0</elevation>
-      <heading_deg>0</heading_deg>
-    </spherical_coordinates>
-    <model name='washer'>
-      <link name='link'>
-        <pose frame=''>0 0 0.001 0 -0 0</pose>
-        <inertial>
-          <mass>0.0122</mass>
-          <inertia>
-            <ixx>1.08758e-06</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1.08758e-06</iyy>
-            <iyz>0</iyz>
-            <izz>2.16703e-06</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://washer/meshes/washer.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <poissons_ratio>0.305</poissons_ratio>
-              <elastic_modulus>2e+11</elastic_modulus>
-              <ode>
-                <kp>100000</kp>
-                <kd>100</kd>
-                <max_vel>100</max_vel>
-                <min_depth>0.001</min_depth>
-              </ode>
-            </contact>
-            <friction>
-              <torsional>
-                <coefficient>1</coefficient>
-                <use_patch_radius>0</use_patch_radius>
-                <surface_radius>0.01</surface_radius>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-            <bounce/>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://washer/meshes/washer.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>0 2 0 0 -0 0</pose>
-    </model>
-    <model name='washer_0'>
-      <link name='link'>
-        <pose frame=''>0 0 0.001 0 -0 0</pose>
-        <inertial>
-          <mass>0.0122</mass>
-          <inertia>
-            <ixx>1.08758e-06</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1.08758e-06</iyy>
-            <iyz>0</iyz>
-            <izz>2.16703e-06</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://washer/meshes/washer.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <poissons_ratio>0.305</poissons_ratio>
-              <elastic_modulus>2e+11</elastic_modulus>
-              <ode>
-                <kp>100000</kp>
-                <kd>100</kd>
-                <max_vel>100</max_vel>
-                <min_depth>0.001</min_depth>
-              </ode>
-            </contact>
-            <friction>
-              <torsional>
-                <coefficient>1</coefficient>
-                <use_patch_radius>0</use_patch_radius>
-                <surface_radius>0.01</surface_radius>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-            <bounce/>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://washer/meshes/washer.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>0 4 0 0 -0 0</pose>
-    </model>
-    <model name='washer_1'>
-      <link name='link'>
-        <pose frame=''>0 0 0.001 0 -0 0</pose>
-        <inertial>
-          <mass>0.0122</mass>
-          <inertia>
-            <ixx>1.08758e-06</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1.08758e-06</iyy>
-            <iyz>0</iyz>
-            <izz>2.16703e-06</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://washer/meshes/washer.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <poissons_ratio>0.305</poissons_ratio>
-              <elastic_modulus>2e+11</elastic_modulus>
-              <ode>
-                <kp>100000</kp>
-                <kd>100</kd>
-                <max_vel>100</max_vel>
-                <min_depth>0.001</min_depth>
-              </ode>
-            </contact>
-            <friction>
-              <torsional>
-                <coefficient>1</coefficient>
-                <use_patch_radius>0</use_patch_radius>
-                <surface_radius>0.01</surface_radius>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-            <bounce/>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://washer/meshes/washer.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>0 6 0 0 -0 0</pose>
-    </model>
-    <model name='washer_2'>
-      <link name='link'>
-        <pose frame=''>0 0 0.001 0 -0 0</pose>
-        <inertial>
-          <mass>0.0122</mass>
-          <inertia>
-            <ixx>1.08758e-06</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1.08758e-06</iyy>
-            <iyz>0</iyz>
-            <izz>2.16703e-06</izz>
-          </inertia>
-        </inertial>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <uri>model://washer/meshes/washer.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <surface>
-            <contact>
-              <poissons_ratio>0.305</poissons_ratio>
-              <elastic_modulus>2e+11</elastic_modulus>
-              <ode>
-                <kp>100000</kp>
-                <kd>100</kd>
-                <max_vel>100</max_vel>
-                <min_depth>0.001</min_depth>
-              </ode>
-            </contact>
-            <friction>
-              <torsional>
-                <coefficient>1</coefficient>
-                <use_patch_radius>0</use_patch_radius>
-                <surface_radius>0.01</surface_radius>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-            <bounce/>
-          </surface>
-          <max_contacts>10</max_contacts>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <uri>model://washer/meshes/washer.dae</uri>
-              <scale>1 1 1</scale>
-            </mesh>
-          </geometry>
-          <material>
-            <script>
-              <uri>file://media/materials/scripts/gazebo.material</uri>
-              <name>Gazebo/Grey</name>
-            </script>
-          </material>
-        </visual>
-        <self_collide>0</self_collide>
-        <kinematic>0</kinematic>
-        <gravity>1</gravity>
-      </link>
-      <pose frame=''>0 8 0 0 -0 0</pose>
-    </model>
-    <state world_name='default'>
-      <sim_time>959 159000000</sim_time>
-      <real_time>106 927856083</real_time>
-      <wall_time>1558013491 188978799</wall_time>
-      <iterations>959159</iterations>
-      <model name='ground_plane'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>0 0 0 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='washer'>
-        <pose frame=''>0 2 -0.000256 -0.009555 -0.003212 1.8e-05</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-3e-06 2.00001 0.000744 -0.009555 -0.003212 1.8e-05</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.002138 0.000882 -0.002667 2.2603 0.969318 3.11459</acceleration>
-          <wrench>2.6e-05 1.1e-05 -3.3e-05 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='washer_0'>
-        <pose frame=''>0 4 -0.000192 -0.007165 -0.002411 1e-05</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-2e-06 4.00001 0.000808 -0.007165 -0.002411 1e-05</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-2.9e-05 -1e-05 1.5e-05 0.009662 -0.029392 0.000227</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='washer_1'>
-        <pose frame=''>0 6 -0.000128 -0.004779 -0.001608 5e-06</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-2e-06 6 0.000872 -0.004779 -0.001608 5e-06</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>-2.9e-05 -1e-05 1.5e-05 0.009658 -0.02939 0.000152</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='washer_2'>
-        <pose frame=''>0 8 -6.4e-05 -0.002395 -0.000804 1e-06</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose frame=''>-1e-06 8 0.000936 -0.002395 -0.000804 1e-06</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0.002161 0.00088 -0.002664 2.26167 0.971508 3.13483</acceleration>
-          <wrench>2.6e-05 1.1e-05 -3.3e-05 0 -0 0</wrench>
-        </link>
-      </model>
-      <model name='wind_demo_model'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
-        <scale>1 1 1</scale>
-        <link name='roof'>
-          <pose frame=''>0 0 1 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -10 0 -0 0</acceleration>
-          <wrench>0 0 -10 0 -0 0</wrench>
-        </link>
-        <link name='sphere_1'>
-          <pose frame=''>0 0 0.929999 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-        <link name='sphere_10'>
-          <pose frame=''>0 0 0.569973 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-        <link name='sphere_2'>
-          <pose frame=''>0 0 0.889995 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-        <link name='sphere_3'>
-          <pose frame=''>0 0 0.849991 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-        <link name='sphere_4'>
-          <pose frame=''>0 0 0.809988 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-        <link name='sphere_5'>
-          <pose frame=''>0 0 0.769984 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-        <link name='sphere_6'>
-          <pose frame=''>0 0 0.729981 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-        <link name='sphere_7'>
-          <pose frame=''>0 0 0.689978 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-        <link name='sphere_8'>
-          <pose frame=''>0 0 0.649976 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-        <link name='sphere_9'>
-          <pose frame=''>0 0 0.609974 0 -0 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 0 0 -0 0</acceleration>
-          <wrench>0 0 0 0 -0 0</wrench>
-        </link>
-      </model>
-      <light name='sun'>
-        <pose frame=''>0 0 10 0 -0 0</pose>
-      </light>
-    </state>
-    <gui fullscreen='0'>
-      <camera name='user_camera'>
-        <pose frame=''>4.55959 -1.18027 5.48909 0 0.543643 2.17619</pose>
-        <view_controller>orbit</view_controller>
-        <projection_type>perspective</projection_type>
-      </camera>
-    </gui>
+
+    <gravity>0 0 -10</gravity>
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 400 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
   </world>
 </sdf>

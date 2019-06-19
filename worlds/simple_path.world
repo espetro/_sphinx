@@ -59,6 +59,7 @@
       <uri>model://ground_plane</uri>
     </include>
 
+    <!-- Trajectory for main_bot -->
     <include>
       <name>washer_1</name>
       <uri>model://washer</uri>
