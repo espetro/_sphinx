@@ -9,6 +9,7 @@
     simple_front_cam="true"
     with_gimbal="true"
     with_kalamos="false"
+    with_external_cams="false"
     sdcard_serial="__undefined__"
     product_pro="0"/>
   <pose>default</pose>

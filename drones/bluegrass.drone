@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <drone
   name="bluegrass"
-  firmware="http://woody.parrot.biz:8080/view/firmwareBuilds/job/chimera-pc-build/lastSuccessfulBuild/artifact/ardrone3-chimera_pc.ext2.zip"
+  firmware="http://plf.parrot.com/sphinx/firmwares/ardrone3/chimera_pc/latest/images/ardrone3-chimera_pc.ext2.zip"
   hardware="chimeraboard">
   <machine_params
     low_gpu="false"

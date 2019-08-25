@@ -4,6 +4,12 @@
     <gui>
       <camera name="user_camera">
         <pose>-8.89 -14.33 12.97 0.0 0.58 0.84</pose>
+        <track_visual>
+          <static>true</static>
+          <use_model_frame>true</use_model_frame>
+          <xyz>-3 0 1</xyz>
+          <inherit_yaw>true</inherit_yaw>
+        </track_visual>
       </camera>
     </gui>
     <spherical_coordinates>
@@ -39,6 +45,9 @@
       <pressure>101325</pressure>
       <temperature_gradient>-0.0065</temperature_gradient>
     </atmosphere>
+    <!--*****************-->
+    <!--Drone description-->
+    <!--*****************-->
     <plugin name="fwman" filename="libsphinx_fwman.so">
       <spawn_point name="default">
         <pose>0 0 0.2 0 0 0</pose>
@@ -55,14 +64,14 @@
       <!-- Wind mean elevation in decimal degrees. -->
       <elevation_mean>0.0</elevation_mean>
       <!-- Lowpass filter time characteristics in seconds.
-            A value of 0 seconds deactivate the filter. -->
+              A value of 0 seconds deactivate the filter. -->
       <magnitude_time_for_rise>10.0</magnitude_time_for_rise>
       <direction_time_for_rise>30.0</direction_time_for_rise>
       <elevation_time_for_rise>0.0</elevation_time_for_rise>
       <!-- Wind expressions where "val" is the mean value. -->
       <!-- Example: The following defines an horizontal sinusoidal wind with
-           an orientation that turns 360° every 60 seconds. Note that the mean
-           direction and mean elevation are unused. -->
+             an orientation that turns 360° every 60 seconds. Note that the mean
+             direction and mean elevation are unused. -->
       <magnitude_expr>val*(1+0.05*sin(2*pi*time/15))</magnitude_expr>
       <direction_expr>360*time/60</direction_expr>
       <elevation_expr>0.03*noise()</elevation_expr>
